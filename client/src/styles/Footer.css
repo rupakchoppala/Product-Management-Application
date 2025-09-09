@@ -1,0 +1,87 @@
+.app-footer {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #00b4ff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+}
+
+.social-icons a {
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00b4ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .collapsible ul,
+  .collapsible div,
+  .collapsible .social-icons {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .collapsible ul.open,
+  .collapsible div.open,
+  .collapsible .social-icons.open {
+    max-height: 500px;
+  }
+}
