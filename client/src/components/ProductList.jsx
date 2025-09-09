@@ -3,7 +3,7 @@ import { FiPlus } from "react-icons/fi";
 import ProductCard from "./ProductCard";
 import ProductForm from "./ProductForm";
 import ConfirmModal from "./confirmModal";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/productList.css";
+import "../styles/productList.css";
 import axiosInstance from "../utils/axiosInsatnce.js";
 import {toast} from "react-toastify";
 export default function ProductList() {

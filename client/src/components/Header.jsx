@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/Header.css";
+import "../styles/Header.css";
 
 export default function Header() {
   const navigate = useNavigate();

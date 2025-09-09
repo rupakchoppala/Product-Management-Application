@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/ProductForm.css";
+import "../styles/ProductForm.css";
 import { toast } from "react-toastify";
 export default function ProductForm({ productToEdit, onProductAddedOrUpdated, onClose }) {
   const [form, setForm] = useState({

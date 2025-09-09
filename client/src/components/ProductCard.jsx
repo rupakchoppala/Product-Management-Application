@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEdit, FaTrashAlt, FaBoxOpen, FaTag } from "react-icons/fa";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/productCard.css";
+import "../styles/productCard.css";
 
 export default function ProductCard({ product, onProductDeleted, onEditClick }) {
   const imageUrl = product?.image ? `http://localhost:3000${product.image}` : null;

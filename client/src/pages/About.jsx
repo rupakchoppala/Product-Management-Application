@@ -1,5 +1,5 @@
 import React from "react";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/Global.css";
+import "../styles/Global.css";
 
 export default function About() {
   return (

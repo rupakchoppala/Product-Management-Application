@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/Footer.css";
+import "../styles/Footer.css";
 
 export default function Footer() {
   const year = new Date().getFullYear();

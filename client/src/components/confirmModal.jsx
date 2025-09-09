@@ -1,5 +1,5 @@
 import React from "react";
-import "/home/akshay/Documents/Product-Management-Application/client/src/styles/confirmModal.css";
+import "../styles/confirmModal.css";
 export default function ConfirmModal({ message, onConfirm, onCancel }) {
   return (
     <div className="modal-backdrop">
