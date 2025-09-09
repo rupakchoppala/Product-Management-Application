@@ -56,8 +56,8 @@ export default function ProductForm({ productToEdit, onProductAddedOrUpdated, on
 
     try {
       const url = productToEdit
-        ? `http://localhost:3000/api/products/update/${productToEdit._id}`
-        : "http://localhost:3000/api/products/createProduct";
+        ? `https://product-management-application-3.onrender.com/api/products/update/${productToEdit._id}`
+        : "https://product-management-application-3.onrender.com/api/products/createProduct";
       const method = productToEdit ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });

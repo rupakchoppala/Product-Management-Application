@@ -3,7 +3,7 @@ import { FaEdit, FaTrashAlt, FaBoxOpen, FaTag } from "react-icons/fa";
 import "../styles/productCard.css";
 
 export default function ProductCard({ product, onProductDeleted, onEditClick }) {
-  const imageUrl = product?.image ? `http://localhost:3000${product.image}` : null;
+  const imageUrl = product?.image ? `https://product-management-application-3.onrender.com${product.image}` : null;
 
   let discount = null;
   if (product.originalPrice && product.originalPrice > product.price) {
