@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app=express();
 app.use(cors({
-    origin: "https://product-management-application-4.onrender.com"
+    origin: "http://localhost:5173"
   }));
 app.use(express.json());
 app.use(express.json({ limit: "50mb" })); // increase limit

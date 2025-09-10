@@ -33,12 +33,12 @@ export const createProduct = async (req, res) => {
 };
 export const updateProduct = async (req, res) => {
   try {
-    const { name, price, description, category } = req.body;
+    const { name, price, description, category,originalPrice } = req.body;
     const imageUrl = req.file ? `/uploads/${req.file.filename}` : req.body.image;
 
     const product = await Product.findByIdAndUpdate(
       req.params.id,
-      { name, price, description, category, image: imageUrl },
+      { name, price, description,originalPrice, category, image: imageUrl },
       { new: true }
     );
     if (!product) return res.status(404).json({ error: "Product not found" });

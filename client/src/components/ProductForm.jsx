@@ -56,8 +56,8 @@ export default function ProductForm({ productToEdit, onProductAddedOrUpdated, on
 
     try {
       const url = productToEdit
-        ? `https://product-management-application-3.onrender.com/api/products/update/${productToEdit._id}`
-        : "https://product-management-application-3.onrender.com/api/products/createProduct";
+        ? `http://localhost:3000/api/products/update/${productToEdit._id}`
+        : "http://localhost:3000/api/products";
       const method = productToEdit ? "PUT" : "POST";
 
       const res = await fetch(url, { method, body: formData });
@@ -89,7 +89,13 @@ export default function ProductForm({ productToEdit, onProductAddedOrUpdated, on
         placeholder="Original Price"
         required
       />
-      <input type="text" name="description" value={form.description} onChange={handleChange} placeholder="Description" />
+     <textarea
+  name="description"
+  value={form.description}
+  onChange={handleChange}
+  placeholder="Description"
+/>
+
       <select name="category" value={form.category} onChange={handleChange} required>
         <option value="" disabled>
           Select Category

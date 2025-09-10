@@ -19,7 +19,7 @@ export default function ProductList() {
     let isMounted = true;
     async function fetchProducts() {
       try {
-        const res = await fetch("https://product-management-application-3.onrender.com/api/products/all_products");
+        const res = await fetch("http://localhost:3000/api/products");
         const data = await res.json();
         if (isMounted) setProducts(Array.isArray(data) ? data : []);
       } catch (err) {
@@ -48,8 +48,9 @@ export default function ProductList() {
 
   const confirmDelete = async () => {
     try {
-      await axiosInstance.delete(`/api/products/delete/${productToDelete._id}`);
+      await axiosInstance.delete(`/api/products/${productToDelete._id}`);
       setProducts((prev) => prev.filter((p) => p._id !== productToDelete._id));
+      toast.success(`Product ${productToDelete.name}  deleted successfully`)
       setProductToDelete(null);
     } catch (err) {
       console.error("Failed to delete product:", err);

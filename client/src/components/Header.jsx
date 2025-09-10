@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaShoppingBag } from "react-icons/fa";
 import "../styles/Header.css";
 
 export default function Header() {
@@ -22,23 +22,29 @@ export default function Header() {
   return (
     <header className="app-header">
       <div className="container header-inner">
+        {/* Brand */}
         <div className="brand" onClick={() => navigate("/")}>
-          <div className="logo">PM</div>
+          <div className="logo">
+            <FaShoppingBag />
+          </div>
           <div className="brand-text">
-            <span className="title">Product Management</span>
-           
+            <span className="title">AgriBloom</span>
           </div>
         </div>
+
+        {/* Navigation */}
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
         </nav>
+
+        {/* Actions */}
         <div className="header-actions">
           <input
             className="header-search"
-            placeholder="Quick search..."
+            placeholder="Search for products..."
             onKeyDown={handleSearch}
           />
           <button
