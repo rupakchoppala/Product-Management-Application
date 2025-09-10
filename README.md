@@ -37,59 +37,37 @@ Designed with a clean UI and responsive components for smooth user experience.
 ---
 
 ## 📂 Project Structure
+
+```bash
 product-management-application/
-│── client/ # React frontend
-│ ├── src/
-│ │ ├── components/ # ProductCard, ProductForm, Modals, etc.
-│ │ ├── utils/ # Axios instance, helpers
-│ │ └── App.js
-│ └── package.json
+│── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/     # ProductCard, ProductForm, Modals, etc.
+│   │   ├── utils/          # Axios instance, helpers
+│   │   └── App.js
+│   └── package.json
 │
-│── server/ # Node.js backend
-│ ├── models/ # Product schema (if MongoDB used)
-│ ├── routes/ # API endpoints
-│ ├── server.js # Main server file
-│ └── package.json
+│── server/                 # Node.js backend
+│   ├── models/             # Product schema (if MongoDB used)
+│   ├── routes/             # API endpoints
+│   ├── server.js           # Main server file
+│   └── package.json
 │
 └── README.md
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/your-username/product-management-application.git
 cd product-management-application
 cd server
-npm installBackend runs on http://localhost:3000
-
-3️⃣ Setup Frontend
-cd client
 npm install
 npm start
-npm start
+cd client
+npm install
+npm run dev
 API Endpoints (Sample)
-Method	 Endpoint	  Description
-GET	 /api/products	Get all products
-POST	 /api/products	Add a new product
-PUT	 /api/products/:id	Update a product
-DELETE	/api/products/:id	Delete a product
-Outcomes
-
-Built a scalable CRUD application using MERN stack fundamentals.
-
-Demonstrated frontend-backend integration with REST APIs.
-
-Applied state management and React hooks for smooth UX.
-
-Designed a modular project structure for maintainability.
-Author
-
+GET     /api/products       # Get all products
+POST    /api/products       # Add a new product
+PUT     /api/products/:id   # Update a product
+DELETE  /api/products/:id   # Delete a product
+```
 Rupak Choppala – Full Stack Developer
 
  Email: rupakchoppala@gmail.com
-
-
-
-
