@@ -4,7 +4,7 @@ import "../styles/productCard.css";
 
 export default function ProductCard({ product, onProductDeleted, onEditClick }) {
   const imageUrl = product?.image
-    ? `http://localhost:3000${product.image}`
+    ? `https://product-management-application-3.onrender.com${product.image}`
     : null;
 
   const discount =

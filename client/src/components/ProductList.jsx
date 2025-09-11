@@ -19,7 +19,7 @@ export default function ProductList() {
     let isMounted = true;
     async function fetchProducts() {
       try {
-        const res = await fetch("http://localhost:3000/api/products");
+        const res = await fetch("https://product-management-application-3.onrender.com/api/products");
         const data = await res.json();
         if (isMounted) setProducts(Array.isArray(data) ? data : []);
       } catch (err) {
